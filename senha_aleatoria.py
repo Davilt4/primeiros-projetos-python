@@ -26,7 +26,6 @@ while True:
             cinco_letras_minusculas = "".join(random.choices(letras_minusculas,k=(tamanho_numeros)))
             senha = caractere_maiusculo + dois_numeros + cinco_letras_minusculas
             senha_embaralhada = "".join(random.sample(senha, len(senha)))
-            print(len(senha_embaralhada))
             return senha_embaralhada
             
         print(f"A senha gerada é: {gerar_senha()}") 
