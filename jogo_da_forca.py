@@ -3,15 +3,13 @@ import os
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-# possiveis_palavras = ['segredo', 'banana', 'cebola', 'lactose']
-possiveis_palavras = ["banana"]
+possiveis_palavras = ['segredo', 'banana', 'cebola', 'lactose']
 palavra_secreta = "".join(random.choice(possiveis_palavras))
 palavra_formatada = "_"*(len(palavra_secreta))
 letras_acertadas = ""
 letras_erradas = ""
 chute_palavra = ""
 tentativas = len(palavra_secreta)
-# print(f"{palavra_formatada} | {tentativas} tentativas.")
 
 while tentativas >= 1 and palavra_formatada != palavra_secreta:
 
@@ -63,7 +61,6 @@ while tentativas >= 1 and palavra_formatada != palavra_secreta:
                 palavra_usuario += palavra_formatada[i]
 
 
-
     else: #O palpite não esta na palavra secreta!
         os.system('cls' if os.name == 'nt' else 'clear')
         if len(palpite) == 1:
@@ -72,11 +69,7 @@ while tentativas >= 1 and palavra_formatada != palavra_secreta:
         letras_erradas += palpite
         
 
-    
     palavra_formatada = palavra_usuario #Muda permanentemante as mudanças feitas no for acima.
-
-
-
 
 
 #Prints finais
@@ -85,6 +78,3 @@ if palavra_formatada == palavra_secreta:
     print("Parabéns, você adivinhou a palavra secreta.")
 else:
     print(f"Não foi dessa vez. A palava secreta é: {palavra_secreta}")
-
-
-            
