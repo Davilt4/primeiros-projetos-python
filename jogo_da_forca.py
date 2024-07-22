@@ -9,7 +9,7 @@ palavra_formatada = "_"*(len(palavra_secreta))
 letras_acertadas = ""
 letras_erradas = ""
 chute_palavra = ""
-tentativas = len(palavra_secreta)
+tentativas = len(palavra_secreta) + int( len(palavra_secreta)/4)
 
 while tentativas >= 1 and palavra_formatada != palavra_secreta:
 
